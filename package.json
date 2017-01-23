@@ -2,8 +2,9 @@
   "name": "exam3barbara",
   "version": "1.0.0",
   "description": "booking hotel",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/dibattista/exam3barbara/issues"
   },
-  "homepage": "https://github.com/dibattista/exam3barbara#readme"
+  "homepage": "https://github.com/dibattista/exam3barbara#readme",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.21",
+    "mongoose": "^4.7.7",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
+  }
 }

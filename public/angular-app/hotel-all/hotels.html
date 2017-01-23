@@ -1,0 +1,33 @@
+
+<div class="row form-group" style="height:100px">
+      <div class="col-xs-12 col-md-12">
+          <div class="panel panel-default">
+              <div class="panel-image">
+                    <img src="/photos/hotel/corinthiahotelbudapest/1.jpg" class="panel-image-preview" style="height:500px"/>
+                    <h1>good news you are in hollyday</h1>
+              </div>
+          </div>
+      </div>
+
+
+</div>
+	<div class="row form-group">
+        <div class="col-xs-12 col-md-3" ng-repeat="hotel in vm.hotels">
+            <div class="panel panel-default">
+                <div class="panel-image">
+                      <img src="/photos/hotel/corinthiahotelbudapest/3.jpg" class="panel-image-preview" />
+                    <label for="toggle-1"></label>
+                </div>
+                <div class="panel-body">
+                  <ul>
+                    <li><a ng-href="#!/hotel/{{ hotel._id }}"><h3>{{ hotel.name }}</h3></a></li>
+                    <li><p>{{ hotel.description }}</p></li>
+                  </ul>
+                  <p></p>
+                </div>
+
+            </div>
+        </div>
+
+
+</div>

@@ -1,0 +1,63 @@
+<div class="container">
+  <div classs="row">
+    <div class="col-xs-12 col-md-12">
+      <img src="photos/hotel/corinthiahotelbudapest/2.jpg">
+      <div class="card-block">
+        <h1>{{ vm.hotels.name }} <rating stars="vm.stars"></rating> </h1>
+        <h3>{{ vm.hotels.description }} </h3>
+      </div>
+    </div>
+  </div>
+<div class="row form-group">
+      <div class="col-xs-12 col-md-12" ng-repeat="room in vm.hotels.rooms">
+          <div class="panel panel-default">
+              <div class="panel-image">
+                    <img src="{{room.photos}}" class="panel-image-preview" />
+                  <label for="toggle-1"></label>
+              </div>
+              <div class="panel-body">
+                <ul>
+                  <li><h3>{{ room.type }}</h3></li>
+                  <li>{{ room.description }}</li>
+                  <li>Chambre disponible : {{ room.number }}</li>
+                  <li><a href="#!/connect" class="btn btn-default" role="button">Réserver</a></li>
+                </ul>
+              </div>
+
+          </div>
+      </div>
+  <div class="row form-group">
+    <div class="col-xs-6 col-md-6">
+      <div class="panel panel-default" style="padding:30px">
+        <h3>Reviews</h3>
+        <ul>
+          <li ng-repeat="review in vm.hotels.reviews"> <strong>{{ review.name }} says:</strong> {{ review.review }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-6">
+      <div class="panel panel-default" style="padding:30px">
+        <form name="vm.reviewForm" ng-submit="vm.addReview()">
+          Your name: <input type="text" name="name" required ng-minlength="2" ng-model="vm.name">
+          <div ng-show="vm.reviewForm.name.$dirty && vm.reviewForm.name.$invalid && vm.isSubmitted">
+            <p>Name should be more than 2 characters long</p>
+          </div>
+        </br>
+          Your rating: <input type="number" name="rating" required ng-pattern="/^[1-5]$/" ng-model="vm.rating">
+          <div ng-show="vm.reviewForm.rating.$dirty && vm.reviewForm.rating.$invalid && vm.isSubmitted">
+            <p>Rating must be between 1-5.</p>
+
+          </div>
+        </br>
+          Your review: <textarea name="review" required ng-model="vm.review"></textarea>
+          <div ng-show="vm.reviewForm.review.$dirty && vm.isSubmitted">
+            <p>Please add a review</p>
+          </div>
+
+          <button type="submit" class="btn">Add review</button>
+        </form>
+      </div>
+     </div>
+  </div>
+</div>
+</div>

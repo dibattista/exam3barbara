@@ -1,0 +1,19 @@
+{
+  "name": "exam3barbara",
+  "version": "1.0.0",
+  "description": "booking hotel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dibattista/exam3barbara.git"
+  },
+  "author": "barbara dibattista",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dibattista/exam3barbara/issues"
+  },
+  "homepage": "https://github.com/dibattista/exam3barbara#readme"
+}
